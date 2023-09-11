@@ -1,7 +1,8 @@
 # Express Socket Server
 
 ### Minimal setup from scratch
-prerequisites
+This is the __memo__ for creating express project without usinh toolchain.
+#### steps
 1. create empty folder
 2. `yarn add typescript --dev`
 3. `yarn add express dotenv`

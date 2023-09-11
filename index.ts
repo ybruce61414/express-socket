@@ -70,11 +70,6 @@ socketIo.on(SOCKET_EVENT.connection, socket => {
       socket.emit(SOCKET_EVENT.messageFromServer, messageFromOtherObj)
     }, 2_000)
   })
-
-  // Send a message to the connected client 5 seconds after the connection is created.
-  // setTimeout(() => {
-  //   socket.emit('message_from_server', Math.random())
-  // }, 5_000)
 })
 
 app.get('/', (req: Request, res: Response) => {
