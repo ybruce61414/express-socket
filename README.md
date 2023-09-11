@@ -1,6 +1,6 @@
 # Express Socket Server
 
-This is a quick demo for [Socket.IO](https://socket.io/) server.
+This is a quick demo for webSocket server using [Socket.IO](https://socket.io/).
 
 ### Quick start  
 Activate server through Docker:
@@ -10,8 +10,9 @@ Activate server through Docker:
  docker build --tag express-socket .          # ----(1)
  docker run -d -p 8000:8000 express-socket    # ----(2)
  ```
-- `--publish (-p)` command is [host port]:[container port]
-- `-d` running in detached mode
+_notes_:
+  -  `--publish (-p)` command is [host port]:[container port]
+  -  `-d` running in detached mode
 
 Terminate Sever:
 ```zsh
