@@ -1,6 +1,6 @@
 # Express Socket Server
 
-This is a quick demo for [Socket.IO]('https://socket.io/') server.
+This is a quick demo for [Socket.IO](https://socket.io/) server.
 
 ### Quick start  
 Activate server through Docker:
