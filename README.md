@@ -1,12 +1,13 @@
 # Express Socket Server
 
+### Minimal setup from scratch
 prerequisites
-
-1. `yarn add typescript --dev`
-2. `yarn add express dotenv`
-3. `yarn add @types/express @types/node`
-4. `yarn add -D concurrently nodemon`
-5. `npx tsc --int`
+1. create empty folder
+2. `yarn add typescript --dev`
+3. `yarn add express dotenv`
+4. `yarn add @types/express @types/node`
+5. `yarn add -D concurrently nodemon`
+6. `npx tsc --int`
 
 add to package.json
 
@@ -20,14 +21,24 @@ add to package.json
 }
 ```
 
-run in docker
+### Activate server  
+1. build image
+ ```zsh 
+ docker build --tag express-socket . 
+ ```
+2. run container
+   - `--publish (-p)` command is [host port]:[container port]
+   - `-d` running in detached mode
 ```zsh
-  1. docker build --tag express-socket .
-  2. docker run -p 8000:8000 express-socket  
+  docker run -d -p 8000:8000 express-socket  
 ```
 
-terminate docker container 
+### Terminate Sever
+- show all running containers
 ```zsh
-  1. docker ps -a
-  2. docker stop [CONTAINER_NAME]
+  docker ps -a
+```
+- stop container
+```zsh
+  docker stop [CONTAINER_NAME]
 ```
