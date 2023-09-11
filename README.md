@@ -3,15 +3,15 @@
 This is a quick demo for [Socket.IO]('https://socket.io/') server.
 
 ### Quick start  
-Activate server:
+Activate server through Docker:
 1. build image
 2. run container
-   - `--publish (-p)` command is [host port]:[container port]
-   - `-d` running in detached mode
  ```zsh 
  docker build --tag express-socket .          # ----(1)
  docker run -d -p 8000:8000 express-socket    # ----(2)
  ```
+- `--publish (-p)` command is [host port]:[container port]
+- `-d` running in detached mode
 
 Terminate Sever:
 ```zsh
