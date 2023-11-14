@@ -7,17 +7,20 @@ Activate server through Docker:
 1. build image
 2. run container
  ```zsh 
- docker build --tag express-socket .          # ----(1)
- docker run -d -p 8000:8000 express-socket    # ----(2)
+ $ cd /path/to/express-socket                   # navigate to the repo contains Dockerfile 
+ $ docker build --tag express-socket .          # ----(1)
+ $ docker run -d -p 8000:8000 express-socket    # ----(2)
  ```
 _notes_:
-  -  `--publish (-p)` command is [host port]:[container port]
+  -  `--publish (-p)` command is __[host port]:[container port]__
   -  `-d` running in detached mode
 
 Terminate Sever:
 ```zsh
-  docker ps -a                   # show all running containers
-  docker stop [CONTAINER_NAME]   # stop container
+  $ docker ps -a                   # show all running containers
+  $ docker stop [CONTAINER_NAMES]     # stop container
+  $ docker rm [CONTAINER_NAMES]       # remove container
+  ($ docker rm -f [CONTAINER_NAMES])  # stop and remove 
 ```
 
 ### Memo
